@@ -1,0 +1,159 @@
+
+@media only screen and (max-width: 600px){
+    .Container{
+    position: absolute;
+    margin:auto;
+    display: block;
+    text-align: center;
+    width:80%;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotateZ(0deg);
+    }100%{
+        transform: rotateZ(360deg);
+    }
+}
+body {
+    margin: 0;
+    background-color: #232323;
+    font-family: "Open Sans",sans-serif;
+}
+
+.Centered{
+    width:90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    top:50vh;
+    transform: translateY(-60%);
+    margin: auto;
+    
+}
+.Centered img{
+    animation: rotate 3s ease-in-out 1s infinite ;
+    width:15vh;
+}
+.Centered h1{
+    color:white;
+    font-size:32px;
+    margin-top:2px;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 900;
+}
+.Centered p{
+    
+    margin-top:2px;
+    color:rgb(170, 170, 170);
+    font-size:18px;
+}
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    float:left;
+    height:fit-content;
+}
+.Container2{
+    z-index:12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom:0px;
+    padding:35px;
+    height:fit-content;
+}
+.Centered input{
+    font-weight: 400;
+    padding:20px;
+    font-family: 'Montserrat',sans-serif;
+    background-color: black;
+    color:white;
+    width:80%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px black;
+}
+input:focus{
+    text-decoration: none;
+    outline-style: none;
+}
+.Centered .fas{
+    background-color: #9451f2;
+    border: none;
+    border-radius: 60px;
+    font-size:25px !important;
+    position: absolute;
+    font-weight: 900;
+    color:white;
+    right:25px;
+    padding:10px;
+    padding-right:15px;
+    padding-left:15px;
+    bottom:5px;
+}
+.Centered .fas:hover{
+    background-color: white;
+    color:#9451f2;
+    cursor: pointer;
+}
+.Container2 h2{
+    margin:0px;
+    padding:0px;
+    margin-left:20px;
+    color:rgb(170, 170, 170);
+}
+.Container2 .fab{
+    color:#232323;
+    padding:10px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size:25px;
+    margin-left:10px;
+    background-color: rgb(170, 170, 170);
+}
+.Container2 .fab:hover{
+    background-color: white;
+}
+header img{
+    margin-left:50px;
+    margin-top:30px;
+    
+    width:50px;
+    height:fit-content
+}
+.banner{
+    background-color: #9451f2;
+    border-radius: 500%;
+    width:200vw;
+    position: fixed;
+    bottom:-100px;
+    left:-50vw;
+    z-index:10;
+    height:120px;
+}
+header h2{
+    font-family: 'GT Haptik Regular',sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    color:white;
+    padding:30px;
+    padding-left:10px;
+    font-size:18px;
+}
+
+@media only screen and (max-width: 600px){
+    
+    .Container2{
+        padding-left:0px;
+        width:100%;
+        text-align: center;
+    }
+    .Container2 .fab-twitter{
+        padding-left:0px;
+        margin-left: 0px;
+    }
+}
