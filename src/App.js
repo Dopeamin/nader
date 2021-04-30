@@ -1,30 +1,60 @@
 
 import './App.css';
 import ReactDOM from 'react-dom';
-import { Component } from 'react';
-
+import {Component} from 'react';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 class App extends Component{
+   
         state = { email: '' };
         constructor(props) {
             super(props);
             this.state = { email: '' };
             this.onSubmit = this.onSubmit.bind(this)
-            this.myChangeHandler = this.myChangeHandler.bind(this)
+            this.myChangeHandler = this.myChangeHandler.bind(this);
+            this.createNotification = this.createNotification.bind(this);
+
           }
           myChangeHandler = (event) => {
             this.setState({email: event.target.value});
           }
+          createNotification(type){
+            
+              switch (type) {
+                case 'info':
+                  NotificationManager.info('Info message');
+                  break;
+                case 'success':
+                  NotificationManager.success('Success', 'Email Added Successfully');
+                  break;
+                case 'warning':
+                  NotificationManager.warning('Warning', 'Make Sure to fill the email form', 3000);
+                  break;
+                case 'error':
+                  NotificationManager.error('Error', 'Make sure u type a valid email', 5000);
+                  break;
+              }
+            
+          };
         onSubmit(e) {
             const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-            if(re.test(String(this.state.email).toLowerCase())){
-                alert("Email Added");
+            if(this.state.email == ""){
+                    this.createNotification('warning');
             }else{
-                alert("Please Verify your email");
+                if(re.test(String(this.state.email).toLowerCase())){
+                    this.createNotification('success');
+                }else{
+                    this.createNotification('error');
+                }
             }
+            
         }
+        
+        
     render(){
+        
         return ( 
+            
             <div className = "App" >
                 <header>
                     <div className="Container">
@@ -51,6 +81,9 @@ class App extends Component{
                 </footer>
                 <div className="banner">
 
+                </div>
+                <div>
+                <NotificationContainer/>
                 </div>
             </div>
             
