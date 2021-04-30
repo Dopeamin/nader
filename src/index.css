@@ -11,12 +11,9 @@
 
 @keyframes rotate {
     0%{
-        filter:blur(0px);
         transform: rotateZ(0deg);
     }50%{
-        filter:blur(1px);
     }100%{
-        filter:blur(0px);
         transform: rotateZ(360deg);
     }
 }
