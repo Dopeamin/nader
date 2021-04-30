@@ -58,14 +58,14 @@ class App extends Component{
             <div className = "App" >
                 <header>
                     <div className="Container">
-                            <img src="logo.png"></img>
+                            <img src="logo.svg"></img>
                             <h2>Sollectify</h2>
                     </div>
                     
                 </header>
                 
                 <div className="Centered">
-                <img src="logo.png"></img>
+                <img src="logo.svg"></img>
                     <h1>Sollectify</h1>
                     <p>Fast and easy to use NFT marketplace on solana blockchain</p>
                         <input type="email"  name="email" onChange={this.myChangeHandler} placeholder="Email" required></input>
