@@ -90,12 +90,13 @@ input:focus{
 .Centered .fas{
     background-color: #9451f2;
     border: none;
+    width:22px;
     border-radius: 60px;
     font-size:25px !important;
     position: absolute;
     font-weight: 900;
     color:white;
-    right:25px;
+    right:30px;
     padding:10px;
     padding-right:15px;
     padding-left:15px;

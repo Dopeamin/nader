@@ -4,8 +4,13 @@ import ReactDOM from 'react-dom';
 import {Component} from 'react';
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fab,fas);
 class App extends Component{
-   
+        
         state = { email: '' };
         constructor(props) {
             super(props);
@@ -69,14 +74,15 @@ class App extends Component{
                     <h1>Sollectify</h1>
                     <p>Fast and easy to use NFT marketplace on solana blockchain</p>
                         <input type="email"  name="email" onChange={this.myChangeHandler} placeholder="Email" required></input>
-                        <button   type="button" onClick={this.onSubmit} class="fas fa-angle-right"></button>
+                        <button   type="button" style={{border:'none',background:'transparent'}} onClick={this.onSubmit}><FontAwesomeIcon class="fas" icon={['fas',"arrow-right"]} /></button>
                     
                     
                 </div>
                 <div className="Container2">
-                        <a href="https://twitter.com/sollectify" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-telegram"></a>
-                        <a href="https://discord.gg/s9F4jxxX8M" class="fab fa-discord"></a><br></br>
+                
+                        <a href="https://twitter.com/sollectify"style={{marginRight:'20px'}}><FontAwesomeIcon class="fab" icon={['fab',"twitter"]} /></a>
+                        <a href="#" style={{marginRight:'20px'}}><FontAwesomeIcon class="fab" icon={['fab',"telegram"]} /></a>
+                        <a href="https://discord.gg/s9F4jxxX8M" style={{marginRight:'20px'}}><FontAwesomeIcon class="fab" icon={['fab',"discord"]} /></a><br></br>
                 </div>
                 <div className="banner">
 
