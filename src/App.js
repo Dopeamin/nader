@@ -63,8 +63,9 @@ class App extends Component{
                     </div>
                     
                 </header>
+                
                 <div className="Centered">
-                    <img src="logo.png"></img>
+                <img src="logo.png"></img>
                     <h1>Sollectify</h1>
                     <p>Fast and easy to use NFT marketplace on solana blockchain</p>
                         <input type="email"  name="email" onChange={this.myChangeHandler} placeholder="Email" required></input>
@@ -72,13 +73,11 @@ class App extends Component{
                     
                     
                 </div>
-                <footer>
                 <div className="Container2">
                         <a href="https://twitter.com/sollectify" class="fab fa-twitter"></a>
                         <a href="#" class="fab fa-telegram"></a>
                         <a href="https://discord.gg/s9F4jxxX8M" class="fab fa-discord"></a><br></br>
                 </div>
-                </footer>
                 <div className="banner">
 
                 </div>
